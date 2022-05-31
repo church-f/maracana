@@ -35,6 +35,9 @@ body{
     text-align: center;
     width: auto;
 }
+.contact p{
+    margin: 5px;
+}
 
 .via, .numero{
     font-weight: bold;

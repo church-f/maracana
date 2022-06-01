@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+    
+}
+
+body{
+    overflow-x: hidden;
+}
+
+
+.banner{
+    background-image: url('bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 30%;
+    background-position: center;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#titolo{
+    color: #fff;
+    text-shadow: 4px 5px 7px #000;
+    font-size: 86px;
+    font-weight: bold;
+    font-family: Rubik;
+    margin: 100px 0;
+}
+
+.contact{
+    text-align: center;
+    width: auto;
+}
+.contact p{
+    margin: 5px;
+}
+
+.via, .numero{
+    font-weight: bold;
+}
+
+.numero{
+    color: #000;
+}
+
+.centro{
+    margin: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+.centro .up{
+    display: flex;
+    flex-direction: row;
+    
+    padding-bottom: 10px;
+    justify-content:space-around;
+    margin: 0 10%;
+}
+
+.orari{
+    
+    flex-direction: column;
+    width: 29%;
+}
+
+.chi-siamo{
+    width: 60%;
+    
+}
+
+.down{
+    display: flex;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.prodotto{
+    margin: 20px 0;
+}
+
+.caff{
+   color: #fff; 
+   text-shadow: 0px 4px 5px #000000;
+   background-image: url(./caffe.png);
+   width: 100vw;
+   padding: 20px 0;
+}
+
+.prodotto p{
+    font-weight: 900;
+    font-size: 23px;
+    line-height: 27px;
+    margin: 0 20%;
+}
+
+#gelato{
+    width: 370px;
+    height: 430px;
+    margin-left: 50px;
+}
+
+.gelateria{
+    display: flex;
+    flex-direction: row;
+}
+
+footer{
+    background-color: #C4C4C4;
+    
+    display: flex;
+    flex-direction: column;
+}
+
+footer a{
+    margin: 3px 0 3px 10px;
+    color: #000;
+}
+
+@media only screen and (max-width: 768px){
+    .gelateria{
+        flex-direction: column;
+    }
+
+    #gelato{
+        width: 50%;
+    }
+
+    #titolo{
+        font-size: 70px;
+        margin: 80px 0;
+    }
+
+    .centro .up{
+        margin: 0 0;
+    }
+    
+    .prodotto p{
+        margin: 10px;
+    }
+
+   #gelato{
+       display: none;
+   }
+}

@@ -103,16 +103,32 @@ body{
     margin: 0 20%;
 }
 
-#gelato{
-    width: 370px;
-    height: 430px;
-    margin-left: 50px;
-}
+
 
 .gelateria{
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 30% 70%;
 }
+
+.foto{
+    position: relative;
+    height: min-content;
+    margin-left: 20px
+}
+
+
+
+
+.img{
+    display: none;
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {opacity: .3}
+    to {opacity: 1}
+  }
 
 footer{
     background-color: #C4C4C4;
@@ -131,9 +147,7 @@ footer a{
         flex-direction: column;
     }
 
-    #gelato{
-        width: 50%;
-    }
+    
 
     #titolo{
         font-size: 70px;
@@ -148,7 +162,12 @@ footer a{
         margin: 10px;
     }
 
-   #gelato{
-       display: none;
-   }
+    .gelateria{
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+    }
+
+   
 }

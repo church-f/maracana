@@ -53,13 +53,21 @@
                 </div>
                 <div class="separatore"></div>
                 <div class="prodotto gelateria">
-                    <img src="./gelato.png" alt="" id="gelato">
+                    <div class="foto">
+                        <img src="img/1.png" alt="" class="img">
+                        <img src="img/2.png" alt="" class="img">
+                        <img src="img/3.png" alt="" class="img">
+                        <img src="img/4.png" alt="" class="img">
+                        <img src="img/5.png" alt="" class="img">
+                        
+                    </div>
                     <div>
                         <h1>GELATERIA </h1>
                         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id pulvinar justo. Morbi hendrerit massa eu metus congue, sed interdum lacus interdum. Mauris quis augue vitae orci iaculis porta. Morbi finibus neque sed tortor fringilla, at ultricies turpis semper.
-
+                            
                             Donec a facilisis ligula, a consectetur tellus. Morbi faucibus a sem ut consectetur. Maecenas sit amet fringilla diam. Morbi nisi quam, bibendum eu bibendum sed, eleifend sed eros. Proin fringilla odio eget sapien mollis sollicitudin.</p>
-                    </div>
+                            
+                        </div>
                 </div>
             </div>
         </div>
@@ -71,5 +79,29 @@
         <a href="https://www.google.com/maps/place/Il+Maracan%C3%A0+Gelateria/@45.530282,10.242475,15z/data=!4m2!3m1!1s0x0:0xb5dfd2a22f624395?sa=X&ved=2ahUKEwiL-M6Qvor4AhUnSfEDHcLzBY0Q_BJ6BAhGEAU">Viale del Piave, 30, 25123 Brescia BS</a>
         <a href="https://www.instagram.com/cri.romano/">web developer: Cristian Romano</a>
     </footer>
+
+    <script>
+        let slideN = 1
+        mostra(slideN)
+        function slideF(n){
+            mostra(slideN += n)
+        }
+
+        function mostra(n){
+            let i
+            let slides = document.getElementsByClassName('img')
+            if (n > slides.length) {slideN = 1}
+            if (n < 1) {slideN = slides.length}
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            slides[slideN-1].style.display = "block";
+        }
+
+        setInterval(() => {
+            slideF(1)
+        }, 3000);
+
+    </script>
 </body>
 </html>
